@@ -1,0 +1,156 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --border-color: #dbdbdb;
+    --primary-color: #fe6433;
+}
+
+* {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+/* * box-sizing: border-box; --> tất cả các thẻ trong đều có box-sizing: border-box; --> ví dụ có 1 phần tử A chứa nhiều phần tử khác (như phần tử B, C, D. v.v...) mà ta ko mún phần tử A và các phần tử chứa trong nó có box-sizing: border-box; thì phải viết box-sizing: unset; cho phần tử A, B, C, ....
+Nếu viết kiểu này thì chỉ cần xét box-zing: unset; cho phần tử A thôi (do là inherit nên các phần tử con sẽ thừa hưởng từ phần tử cha, mà ta xét unset cho A rồi nên các thẻ con bên trong sẽ cũng ko có box-sizing) */
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    cursor: pointer;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px ;
+}
+
+.grid__column-2 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 16.6667%;
+}
+
+.grid__column-10 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 83.3334%;
+}
+
+.grid__column-10-2 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 20%;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0; 
+    left: 0;
+    bottom: 0;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2s linear;
+}
+
+.modal__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.modal__body {
+    background-color: var(--white-color);
+    margin: auto;
+    z-index: 9999;
+    border-radius: 4px;
+    width: 35%;
+    min-width: 50rem;
+    overflow: hidden;
+    transform: scale(0);
+    opacity: 0;
+    transition: opacity .2s linear, transform .2s linear;
+}
+
+.btn {
+    padding: 1rem 4.5rem;
+    border-radius: 2px;
+    background-color: #fff;
+    transition: opacity .2s ease;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: .8;
+}
+
+.btn.btn--primary {
+    color: var(--white-color);
+    background-color: #fe6433;
+}
+
+.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.active .modal__body {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.paginator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paginator-item {
+    list-style: none;
+    padding: 0 2rem;
+    font-size: 2rem;
+    color: #939393;
+    font-weight: 400;
+    user-select: none;
+}
+
+.paginator-item:hover label {
+    background-color: var(--white-color);
+}
+
+.paginator-item label {
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.paginator-item-icon {
+    color: #c4c4c4;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
