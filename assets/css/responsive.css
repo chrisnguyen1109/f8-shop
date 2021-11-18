@@ -66,7 +66,7 @@
         position: relative;
     }
     .header__sort-item:not(:last-child)::after {
-        content: '';
+        content: "";
         position: absolute;
         right: 0;
         height: 60%;
@@ -103,7 +103,7 @@
         width: 100%;
     }
     .home-product {
-        margin: 1rem .4rem 1rem;
+        margin: 1rem 0.4rem 1rem;
     }
     .mobile-category {
         display: block;
@@ -121,7 +121,7 @@
     .mobile-category__item {
         list-style: none;
         flex-shrink: 0;
-        padding: .5rem 0.5rem;
+        padding: 0.5rem 0.5rem;
         width: 110px;
         text-align: center;
         border-radius: 5px;
@@ -129,14 +129,14 @@
     .mobile-category__item:not(:last-child) {
         margin-right: 1rem;
     }
-    .mobile-category__item:nth-child(3n+1) {
-        background-color:  #87AFD8;
+    .mobile-category__item:nth-child(3n + 1) {
+        background-color: #87afd8;
     }
-    .mobile-category__item:nth-child(3n+2) {
-        background-color:  #76C9BD;
+    .mobile-category__item:nth-child(3n + 2) {
+        background-color: #76c9bd;
     }
-    .mobile-category__item:nth-child(3n+3) {
-        background-color:  #88CF81;
+    .mobile-category__item:nth-child(3n + 3) {
+        background-color: #88cf81;
     }
     .mobile-category__link {
         font-size: 1.4rem;
@@ -152,7 +152,6 @@
     .footer-list {
         margin-bottom: 3rem;
     }
-
 }
 
 /* Tablet */
@@ -161,7 +160,7 @@
         display: none;
     }
     .header__logo {
-        flex-basis: 12rem;  
+        flex-basis: 12rem;
     }
     .header__search {
         margin-right: 1rem;
@@ -176,7 +175,7 @@
         left: calc(50% + 13px);
     }
     .header__sort-decoration {
-        bottom: -.5rem;
+        bottom: -0.5rem;
     }
 }
 
@@ -202,7 +201,6 @@
         display: block;
     }
     .header__mobile-navigation {
-
     }
     .header__mobile-navigation i {
         color: var(--white-color);
@@ -211,7 +209,6 @@
         cursor: pointer;
     }
     .header__mobile-search {
-
     }
     .header__mobile-search i {
         color: var(--white-color);
@@ -228,8 +225,8 @@
         transform: scaleY(0);
         transform-origin: top;
         z-index: 1;
-        transition: all .2s linear;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+        transition: all 0.2s linear;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
     }
     #header-mobile-search:checked ~ .header-mobile-wrapper {
         opacity: 1;
@@ -239,7 +236,7 @@
         transform: translateX(-50%);
     }
     .paginator-item {
-        padding: 0 .5rem;
+        padding: 0 0.5rem;
         font-size: 1.6rem;
     }
     .footer__heading {
@@ -253,6 +250,6 @@
         margin: auto;
     }
     .header__sort-decoration {
-        bottom: -.6rem;
+        bottom: -0.6rem;
     }
 }
